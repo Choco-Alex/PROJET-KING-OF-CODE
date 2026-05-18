@@ -5,17 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch",
-    "build": "tailwindcss -i ./src/assets/css/input.css -o ./dist/output.css --minify"
+    "start": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0"
-  },
-  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
     "tailwindcss": "^4.3.0"
   }
 }
