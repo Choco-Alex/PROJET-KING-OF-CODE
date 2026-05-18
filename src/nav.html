@@ -1,0 +1,289 @@
+<!-- Changé w-screen par w-full et ajouté overflow-hidden pour plus de sécurité -->
+<div class="header w-full bg-[#0E0E5E] overflow-x-hidden">
+  <header>
+    <div class="max-w-7xl mx-auto">
+      <!-- Ajout de w-full pour s'assurer que le flex ne dépasse pas -->
+      <div
+        class="container_new_version flex items-center justify-between p-3 w-full"
+      >
+        <div class="new_version flex items-center gap-2">
+          <span
+            class="bg-[#F27B86] p-1 text-white text-sm font-medium rounded-[7px] shrink-0"
+            >Nouveau</span
+          >
+          <!-- Ajout de text-sm pour éviter que le texte ne soit trop long sur très petits écrans -->
+          <p class="text-white text-sm md:text-base leading-tight">
+            La nouvelle version est déjà disponible !
+          </p>
+        </div>
+
+        <!-- Sélecteur de langue -->
+        <div class="relative shrink-0">
+          <div
+            id="languageSelector"
+            class="bg-white text-[#0a0a4a] flex items-center gap-2 px-3 py-1 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all"
+          >
+            <span id="selectedText" class="font-bold text-sm">FR</span>
+            <img
+              id="selectedFlag"
+              src="./assets/images/fr_1.png"
+              alt="FR"
+              class="w-6 h-4 object-cover rounded-sm"
+            />
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              />
+            </svg>
+          </div>
+          <ul
+            id="languageList"
+            class="hidden absolute top-full right-0 md:right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-lg overflow-hidden z-50 w-28 border border-gray-200"
+          >
+            <li
+              onclick="changeLang('FR', './assets/images/fr_1.png')"
+              class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+            >
+              <span class="font-bold">FR</span>
+              <img
+                src="./assets/images/fr_1.png"
+                class="w-5 h-3"
+                alt="français"
+              />
+            </li>
+            <li
+              onclick="changeLang('EN', './assets/images/gb.png')"
+              class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              <span class="font-bold">EN</span>
+              <img
+                src="./assets/images/gb.png"
+                class="w-5 h-3"
+                alt="anglais"
+              />
+            </li>
+          </ul>
+          <!-- ... reste de la liste des langues ... -->
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white w-full">
+      <!-- Ajout w-full ici aussi -->
+      <div class="max-w-7xl mx-auto">
+        <nav class="shadow-md w-full">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+              <!-- Logo -->
+              <div class="shrink-0 flex items-center">
+                <img
+                  src="./assets/images/logo.png"
+                  alt="Logo"
+                  class="w-28 md:w-32"
+                />
+              </div>
+
+              <!-- Menu Desktop -->
+              <div class="hidden xs:flex space-x-8 items-center">
+                <ul class="flex items-center gap-[3vw] max-xs:hidden">
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./acceuil.html"
+                      class="relative group text-[#7B7BA7] font-medium"
+                      >Accueil<span
+                        class="absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span
+                    ></a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./prix.html"
+                      class="relative group text-[#7B7BA7] font-medium"
+                      >Prix<span
+                        class="absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span
+                    ></a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./blog.html"
+                      class="relative group text-[#7B7BA7] font-medium"
+                      >Blog<span
+                        class="absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span
+                    ></a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./aidePaysika.html"
+                      class="relative group text-[#7B7BA7] font-medium"
+                      >Aide PaySika<span
+                        class="absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center gap-4">
+                <button
+                  type="button"
+                  class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-2 flex gap-2 rounded-xl text-white font-medium max-xs:hidden"
+                >
+                  <img src="./assets/images/download.svg" alt="" />
+                  Télécharger l'application
+                </button>
+                <div class="relative mt-2 md:mt-0 max-xs:hidden">
+                  <div
+                    id="countrySelector"
+                    class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center gap-2 px-5 py-2 rounded-lg cursor-pointer border-2 border-transparent"
+                  >
+                    <img
+                      id="selectedCountryFlag"
+                      src="./assets/images/glob.png"
+                      alt="GLOBE"
+                      class="w-6 h-4 object-cover rounded-sm"
+                    />
+                    <span id="selectedCountryText" class="font-bold text-sm"
+                      >Choisir Pays</span
+                    >
+                  </div>
+
+                  <ul
+                    id="countryList"
+                    class="hidden justify-start absolute top-full right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl overflow-hidden z-50 w-56 border border-gray-200"
+                  >
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Afrique Francophone',
+                          './assets/images/PaySika-Afrique-Francophone.png',
+                        )
+                      "
+                      class="flex items-center justify-self-start px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                    >
+                      <img
+                        src="./assets/images/PaySika-Afrique-Francophone.png"
+                        class="w-5 h-3"
+                      />
+                      <span class="font-bold text-sm text-[#CCCCDD]"
+                        >Afrique Francophone</span
+                      >
+                    </li>
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Cameroun',
+                          './assets/images/cameroun.png',
+                        )
+                      "
+                      class="flex items-center justify-start px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer"
+                    >
+                      <img src="./assets/images/cameroun.png" class="w-5 h-3" />
+                      <span class="font-bold text-sm text-[#CCCCDD]"
+                        >Cameroun</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <!-- ... Tes liens desktop ... -->
+              </div>
+
+              <!-- Bouton Hamburger -->
+              <div class="xs:hidden flex items-center">
+                <button id="menu-btn" class="p-2">
+                  <svg
+                    id="hamburger-icon"
+                    class="w-8 h-8 text-gray-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                  <svg
+                    id="close-icon"
+                    class="w-8 h-8 text-gray-700 hidden"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MENU MOBILE (Correction de la largeur) -->
+          <div
+            id="mobile-menu"
+            class="xs:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50 border-t w-full"
+          >
+            <div class="px-6 pt-4 pb-8 flex flex-col space-y-6">
+              <ul class="flex flex-col space-y-4">
+                <li>
+                  <a
+                    href="./acceuil.html"
+                    class="text-[#7B7BA7] font-medium text-lg block"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./prix.html"
+                    class="text-[#7B7BA7] font-medium text-lg block"
+                    >Prix</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="text-[#7B7BA7] font-medium text-lg block"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./aidePaysika.html"
+                    class="text-[#7B7BA7] font-medium text-lg block"
+                    >Aide PaySika</a
+                  >
+                </li>
+              </ul>
+
+              <div class="flex flex-col gap-4 border-t pt-4">
+                <button
+                  type="button"
+                  class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-3 flex justify-center gap-2 rounded-xl text-white font-medium w-full"
+                >
+                  <img src="./assets/images/download.svg" alt="" />
+                  Télécharger l'application
+                </button>
+                <div
+                  class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center justify-center gap-2 px-5 py-3 rounded-lg cursor-pointer"
+                >
+                  <img
+                    src="./assets/images/glob.png"
+                    alt="GLOBE"
+                    class="w-6 h-4 object-cover rounded-sm"
+                  />
+                  <span class="font-bold text-sm">Choisir Pays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      </header>
+    </div>

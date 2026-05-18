@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="./assets/CSS/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#f3f4f5] overflow-x-hidden">
+    <div class="header w-full bg-[#0E0E5E]">
+      <header>
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="container_new_version flex items-center justify-between p-3"
+          >
+            <div class="new_version flex items-center gap-2">
+              <span
+                class="bg-[#F27B86] p-1 text-white text-sm font-medium rounded-[7px]"
+                >Nouveau</span
+              >
+              <p class="text-white">
+                La nouvelle version est déjà disponible ! Rendez-vous sur nos
+                réseaux sociaux!
+              </p>
+            </div>
+            <div class="relative mt-2 md:mt-0">
+              <div
+                id="languageSelector"
+                class="bg-white text-[#0a0a4a] flex items-center gap-2 px-3 py-1 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all"
+              >
+                <span id="selectedText" class="font-bold text-sm">FR</span>
+                <img
+                  id="selectedFlag"
+                  src="./assets/images/fr_1.png"
+                  alt="FR"
+                  class="w-6 h-4 object-cover rounded-sm"
+                />
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  />
+                </svg>
+              </div>
+
+              <ul
+                id="languageList"
+                class="hidden absolute top-full right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl overflow-hidden z-50 w-32 border border-gray-200"
+              >
+                <li
+                  onclick="changeLang('FR', './assets/images/fr_1.png')"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                >
+                  <span class="font-bold">FR</span>
+                  <img
+                    src="./assets/images/fr_1.png"
+                    class="w-5 h-3"
+                    alt="français"
+                  />
+                </li>
+                <li
+                  onclick="changeLang('EN', './assets/images/gb.png')"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                >
+                  <span class="font-bold">EN</span>
+                  <img
+                    src="./assets/images/gb.png"
+                    class="w-5 h-3"
+                    alt="anglais"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white px-5 shadow-sm">
+          <div class="max-w-7xl mx-auto">
+            <nav class="flex items-center justify-between py-4">
+              <div class="logo flex items-center gap-12">
+                <img src="./assets/images/logo.png" alt="Logo" class="w-32" />
+                <ul class="items-center gap-[3vw] hidden xs:flex">
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./acceuil.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Accueil<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./prix.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Prix<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./blog.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Blog<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./aidePaysika.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Aide PaySika<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="relative hidden flex-col items-end xs:flex">
+                  <button
+                    id="dropdown-btn"
+                    type="button"
+                    class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-2 flex gap-2 rounded-xl text-white font-medium cursor-pointer items-center transition-all active:scale-95 z-10"
+                  >
+                    <img src="./assets/images/download.svg" alt="" />
+                    <span>Télécharger l'application</span>
+                    <i
+                      class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"
+                      id="dropdown-arrow"
+                    ></i>
+                  </button>
+
+                  <div
+                    id="dropdown-menu"
+                    class="hidden opacity-0 scale-95 transition-all duration-200 absolute top-full right-0 mt-2 w-64 rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5 z-50 transform origin-top-right"
+                  >
+                    <div class="py-1" role="none">
+                      <a
+                        href="#"
+                        class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm text-[#9696B9] hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                      >
+                        <img
+                          src="./assets/images/appstore.jpg"
+                          alt="app store"
+                          class="max-w-8"
+                        />
+                        Depuis App Store
+                      </a>
+
+                      <a
+                        href="#"
+                        class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-[#9696B9] text-sm hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                      >
+                        <img
+                          src="./assets/images/playstore.png"
+                          alt="playstore"
+                          class="max-w-8"
+                        />
+                        Depuis PlayStore
+                      </a>
+
+                      <div class="my-1 border-t border-gray-100"></div>
+
+                      <a
+                        href="#"
+                        class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-[#9696B9] text-sm hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                      >
+                        <img
+                          src="./assets/images/cropped-favicon_3.png"
+                          alt="paysika"
+                        />
+                        Utiliser l'app web PaySika
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative hidden xs:block">
+                  <div
+                    id="countrySelector"
+                    class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center gap-2 px-5 py-2 rounded-lg cursor-pointer border-2 border-transparent"
+                  >
+                    <img
+                      id="selectedCountryFlag"
+                      src="./assets/images/glob.png"
+                      alt="GLOBE"
+                      class="w-6 h-4 object-cover rounded-sm"
+                    />
+                    <span id="selectedCountryText" class="font-bold text-sm"
+                      >Choisir Pays</span
+                    >
+                  </div>
+                  <ul
+                    id="countryList"
+                    class="hidden absolute top-full right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl z-50 w-56 border border-gray-200"
+                  >
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Afrique Francophone',
+                          './assets/images/PaySika-Afrique-Francophone.png',
+                        )
+                      "
+                      class="flex items-center px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                    >
+                      <img
+                        src="./assets/images/PaySika-Afrique-Francophone.png"
+                        class="w-5 h-3"
+                      />
+                      <span class="font-bold text-sm text-[#7B7BA7]"
+                        >Afrique Francophone</span
+                      >
+                    </li>
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Cameroun',
+                          './assets/images/cameroun.png',
+                        )
+                      "
+                      class="flex items-center px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer"
+                    >
+                      <img src="./assets/images/cameroun.png" class="w-5 h-3" />
+                      <span class="font-bold text-sm text-[#7B7BA7]"
+                        >Cameroun</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  id="menu_open"
+                  class="xs:hidden text-2xl cursor-pointer text-[#0E0E5E] p-2 border border-gray-400"
+                >
+                  <i id="menu_icon" class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <div
+            id="mobile_menu"
+            class="xs:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <div class="py-6 flex flex-col gap-6 border-t border-gray-100">
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a
+                    href="./acceuil.html"
+                    class="text-[#7B7BA7] hover:font-extrabold hover:text-[#0E0E5E] font-medium text-lg"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./prix.html"
+                    class="text-[#7B7BA7] hover:font-extrabold hover:text-[#0E0E5E] font-medium text-lg"
+                    >Prix</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="text-[#7B7BA7] hover:font-extrabold hover:text-[#0E0E5E] font-medium text-lg"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./aidePaysika.html"
+                    class="text-[#7B7BA7] hover:font-extrabold hover:text-[#0E0E5E] font-medium text-lg"
+                    >Aide PaySika</a
+                  >
+                </li>
+              </ul>
+
+              <div class="flex flex-col gap-4 pt-4 border-t border-gray-50">
+                <button
+                  type="button"
+                  class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-3 flex justify-center gap-2 rounded-xl text-white font-medium w-full"
+                >
+                  <img src="./assets/images/download.svg" alt="" />
+                  Télécharger l'application
+                </button>
+                <div
+                  class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center justify-center gap-2 px-5 py-3 rounded-lg cursor-pointer"
+                >
+                  <img
+                    src="./assets/images/glob.png"
+                    alt="GLOBE"
+                    class="w-6 h-4 object-cover rounded-sm"
+                  />
+                  <span class="font-bold text-sm">Choisir Pays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <section
+        class="bg-linear-45 from-[#00B4E7] to-[#00C99D] rounded-b-[100px]"
+      >
+        <div class="relative px-3 pt-10 pb-30 lg:py-20 mb-20 max-w-7xl mx-auto">
+          <h1 class="text-[40px] tracking-tight text-white font-bold mb-2">
+            Blog
+          </h1>
+          <p class="text-white text-xl lg:text-base mb-4">
+            Abonnez-vous maintenant et restez à jour.
+          </p>
+
+          <div class="flex flex-col lg:flex-row gap-6 mb-4">
+            <input
+              type="text"
+              class="bg-[#33C5E3] px-5 py-4 w-full lg:w-1/3 rounded-xl"
+            />
+            <button
+              class="cursor-pointer w-fit px-10 py-4 text-base font-bold text-[#0E0E5D] rounded-xl bg-white"
+              type="submit"
+            >
+              S'inscrire
+            </button>
+          </div>
+
+          <div class="">
+            <input type="checkbox" name="" id="" class="" />
+            <span class="text-white text-lg lg:text-base"
+              >Abonnez-vous à notre newsletter</span
+            >
+          </div>
+          <div class="absolute bottom-0 left-3">
+            <select
+              class="absolute -bottom-5 left-3 bg-white text-[#0E0E5D] font-bold px-4 py-3 shadow rounded-lg appearance-none w-72 cursor-pointer focus:outline-none border-none"
+            >
+              <option value="" selected>Toutes les catégories</option>
+              <option value="actu">Actu Paysika</option>
+              <option value="banque">Monde bancaire</option>
+              <option value="recrutement">Recrutement</option>
+              <option value="themes">Thèmes d'actualités</option>
+              <option value="astuces">Trucs et astuces</option>
+            </select>
+
+            <div
+              class="absolute -bottom-5 left-62.5 flex items-center py-4 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-[#0E0E5D]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog_listing pb-0 bg-[#F3F4F5]">
+        <div class="max-w-7xl mx-auto px-3 mb-4">
+          <div class="">
+            <div
+              class="grid grid-cols-1 gap-4 md:grid-cols-2 *:bg-white *:rounded-xl mb-5"
+            >
+              <div class="">
+                <div class="h-61">
+                  <img
+                    src="./assets/images/blog1.png"
+                    alt=""
+                    class="h-full w-full object-cover rounded-t-xl"
+                  />
+                </div>
+                <div class="p-4 space-y-5">
+                  <p class="uppercase font-light text-sm">
+                    themes d'actualites
+                  </p>
+                  <a
+                    href=""
+                    class="inline-block font-bold tracking-normal text-sm/tight"
+                    >Decouvrez ce qu'il vous faut pour devenir creatrice de
+                    contenu ! On vous explique tout...</a
+                  >
+                  <p class="uppercase font-light text-sm mb-5">4 mars 2025</p>
+                </div>
+              </div>
+              <div class="">
+                <div class="h-61">
+                  <img
+                    src="./assets/images/blog2.png"
+                    alt=""
+                    class="h-full w-full object-cover rounded-t-xl"
+                  />
+                </div>
+                <div class="p-4 space-y-5">
+                  <p class="uppercase font-light text-sm">actu paysika</p>
+                  <a
+                    href=""
+                    class="inline-block font-bold tracking-normal text-sm/tight"
+                    >Innovation : L'estimateur de Paiement, Une Solution
+                    Revolutionnaire pour Eviter les Paiements Echoues chez
+                    PaySika</a
+                  >
+                  <p class="uppercase font-light text-sm mb-5">
+                    27 fevrier 2025
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-7xl mx-auto">
+              <div
+                id="box-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog4.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog2.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Thematiques d'eligibilite pour les User generated Content
+                      de PaySika (UGC)</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog5.jpg"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog3.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Programme d'user Generated Content (UGC) avec PaySika :
+                      Gagnez de l'Argent en Partageant Votre Experience
+                      des...</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/help/120.webp"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog4.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog5.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href="./page_detail_blog6.html"
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="box-item hidden">
+                  <div class="h-61">
+                    <img
+                      src="./assets/images/blog3.png"
+                      alt=""
+                      class="h-full w-full object-cover rounded-t-xl"
+                    />
+                  </div>
+
+                  <div
+                    class="p-4 space-y-5 bg-white rounded-bl-2xl rounded-br-2xl"
+                  >
+                    <p class="uppercase font-light text-sm">actu paysika</p>
+                    <a
+                      href=""
+                      class="inline-block font-bold tracking-normal text-sm/tight"
+                      >Devenez des experts du paiement en ligne et hors ligne en
+                      apprenant chaque jour avec PaySika</a
+                    >
+                    <p class="uppercase font-light text-sm mb-5">
+                      21 mars 2025
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <button
+                  id="load-more-btn"
+                  class="inline-block font-medium underline text-blue-600 hover:text-red-600 cursor-pointer"
+                >
+                  Voir plus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-4 mt-15 py-10 relative z-10 bg-linear-to-r from-[#00BCE9] to-[#00C9DB] rounded-[40px] p-6 md:p-10 overflow-hidden flex flex-col md:flex-row items-center"
+        >
+          <div
+            class="w-full text-center flex flex-col items-center md:items-start md:text-left md:w-2/3 text-white z-10"
+          >
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">
+              Sans frais, téléchargez l'application maintenant !
+            </h2>
+
+            <p
+              class="text-sm md:text-lg md:self-start mb-8 max-w-md font-medium opacity-90"
+            >
+              Installez PaySika et créez votre compte en moins de 2 minutes.
+              Créez vos cartes et commencez à les utiliser dès maintenant.
+            </p>
+
+            <button
+              class="bg-white text-[#0E0E5E] md:self-start font-bold py-3 px-8 rounded-2xl mb-12 hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Installez Paysika
+            </button>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 md:self-start"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+                >
+                  <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+                </span>
+                <p class="text-sm md:text-base">Carte instantanée gratuite.</p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+                >
+                  <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+                </span>
+                <p class="text-sm md:text-base">Pas de recharge/maintenance.</p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+                >
+                  <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+                </span>
+                <p class="text-sm md:text-base">Pas de frais de retrait.</p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+                >
+                  <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+                </span>
+                <p class="text-sm md:text-base">Pas de frais mensuel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-full md:w-1/3 flex justify-center mt-10 md:mt-0 relative"
+          >
+            <img
+              src="./assets/images/telecharge-app.png"
+              alt="Main tenant un téléphone"
+              class="w-64 md:w-112.5 md:absolute md:top-1/2 md:-translate-y-1/2 md:-right-16 drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+      <footer class="bg-[#0E0E5E] pb-10 text-white -mt-60 pt-80">
+        <div class="max-w-7xl mx-auto px-6 mb-20">
+          <div
+            class="bg-[#27276E] rounded-[30px] p-10 md:p-16 text-center shadow-2xl"
+          >
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">
+              Contactez-nous maintenant
+            </h2>
+            <p class="text-gray-300 mb-8">Prenons contact.</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+              <button
+                class="animate-oblique-left-to-right bg-white text-[#0E0E5E] font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
+              >
+                Rejoignez la néo-banque mobile
+              </button>
+              <button
+                class="animate-oblique-right-to-left bg-linear-to-r from-[#00B2E1] to-[#00B1C0] text-white font-bold py-3 px-10 rounded-xl transition-transform hover:scale-105 shadow-[0_0_15px_rgba(0,204,146,0.4)]"
+              >
+                Contactez-nous
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-700 pb-12"
+        >
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/images/logo-footer.png"
+                alt="PaySika"
+                class="h-12"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Inscrivez-vous à nos newsletters et soyez à jour
+            </p>
+
+            <form class="space-y-4">
+              <input
+                type="email"
+                class="w-full p-3 rounded-xl bg-white text-black focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="w-full bg-linear-to-r from-[#00B5E3] to-[#00C899] py-3 rounded-xl font-bold hover:bg-linear-to-l"
+              >
+                S'inscrire
+              </button>
+              <label
+                class="flex items-center gap-2 text-md text-gray-300 cursor-pointer"
+              >
+                <input type="checkbox" class="accent-[#E81123]" checked />
+                Abonnez-vous à notre newsletter
+              </label>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">PaySika</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Avantages</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >À Propos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Demander une Demo</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Conditions générales d'utilisation</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Services</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Pourquoi PaySika</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Le processus</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold mb-6">Contacts Rapide</h3>
+
+            <div class="flex gap-4">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300">
+                Contact : +33 7 66 59 27 26 (Il ne s'agit pas d'un numéro du
+                service client. Vous pouvez contacter le service client via le
+                chat dans l'application.)
+              </p>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-envelope text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300">
+                Email : support@paysika.co
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-location-dot text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300 italic">
+                FRANCE : 55 Avenue Louis Breguet, 31400 Toulouse, La Cité.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-facebook-f text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-instagram text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-twitter text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-linkedin-in text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-whatsapp text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-telegram text-xs"></i
+            ></a>
+          </div>
+
+          <div class="text-[10px] md:text-[15px] text-gray-400 text-center">
+            © 2022 PaySika. All rights reserved. Design By
+            <span class="text-[#057169] font-medium">Agence Motion</span>
+          </div>
+        </div>
+        <hr class="max-w-7xl mx-auto text-[#27276E] my-8" />
+        <div class="max-w-7xl mx-auto">
+          <p class="text-xs text-[#57578F]">
+            Les cartes bancaires VISA PaySika sont émises par Ecobank Cameroon
+            au Cameroun, en vertu d’une licence de Visa International.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Holding est une société enregistrée en France, au Registre
+            du Commerce et des Sociétés de Toulouse sous le numéro 881936744,
+            avec siège social au 55 Avenue Louis Breguet, 31400 Toulouse, La
+            Cité, At Home.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Cameroun est immatriculée au registre de commerce et du
+            crédit mobilier de Douala sous le numéro RC/DLN/2021/B/2307, dont le
+            siège social est à Douala Akwa, sis à la Rue Foch; BP 15 027
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Côte d’Ivoire, est immatriculée en Côte d’Ivoire sous le
+            numéro CI-ABJ-03-2022-B17-00002, avec le siège social situé à II
+            Plateaux 7eme Tranche, 28 BP 1676 Abidjan 28.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            Ce site est publié conjointement par PaySika Cameroun et PaySika
+            Holding
+          </p>
+        </div>
+      </footer>
+    </main>
+    <button
+      id="backToTop"
+      class="fixed bottom-8 right-8 z-50 hidden bg-[#0E0E5E] text-white w-12 h-12 rounded-xl shadow-lg items-center justify-center hover:bg-[#00BCE9] transition-all duration-300 cursor-pointer active:scale-95"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

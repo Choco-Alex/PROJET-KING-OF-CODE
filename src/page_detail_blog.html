@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page détails "decouvrez ce qu'il vous faut"</title>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header w-full bg-[#0E0E5E]">
+      <header>
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="container_new_version flex items-center justify-between p-3"
+          >
+            <div class="new_version flex items-center gap-2">
+              <span
+                class="bg-[#F27B86] p-1 text-white text-sm font-medium rounded-[7px]"
+                >Nouveau</span
+              >
+              <p class="text-white">
+                La nouvelle version est déjà disponible ! Rendez-vous sur nos
+                réseaux sociaux!
+              </p>
+            </div>
+            <div class="relative mt-2 md:mt-0">
+              <div
+                id="languageSelector"
+                class="bg-white text-[#0a0a4a] flex items-center gap-2 px-3 py-1 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all"
+              >
+                <span id="selectedText" class="font-bold text-sm">FR</span>
+                <img
+                  id="selectedFlag"
+                  src="./assets/images/fr_1.png"
+                  alt="FR"
+                  class="w-6 h-4 object-cover rounded-sm"
+                />
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  />
+                </svg>
+              </div>
+
+              <ul
+                id="languageList"
+                class="hidden absolute top-full right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl overflow-hidden z-50 w-32 border border-gray-200"
+              >
+                <li
+                  onclick="changeLang('FR', './assets/images/fr_1.png')"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                >
+                  <span class="font-bold">FR</span>
+                  <img
+                    src="./assets/images/fr_1.png"
+                    class="w-5 h-3"
+                    alt="français"
+                  />
+                </li>
+                <li
+                  onclick="changeLang('EN', './assets/images/gb.png')"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                >
+                  <span class="font-bold">EN</span>
+                  <img
+                    src="./assets/images/gb.png"
+                    class="w-5 h-3"
+                    alt="anglais"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white px-5 shadow-sm">
+          <div class="max-w-7xl mx-auto">
+            <nav class="flex items-center justify-between py-4">
+              <div class="logo flex items-center gap-12">
+                <img src="./assets/images/logo.png" alt="Logo" class="w-32" />
+                <ul class="items-center gap-[3vw] hidden xs:flex">
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./acceuil.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Accueil<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./prix.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Prix<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./blog.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Blog<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                  <li class="cursor-pointer transition-colors">
+                    <a
+                      href="./aidePaysika.html"
+                      class="nav-link relative group text-[#7B7BA7] font-medium"
+                    >
+                      Aide PaySika<span
+                        class="line-indicator absolute left-0 -bottom-1 w-0 h-1 bg-linear-to-r from-[#00B5E3] to-[#00C89E] transition-all duration-300 group-hover:w-full"
+                      ></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                class="relative hidden flex-col items-end xs:flex"
+              >
+                <button
+                  id="dropdown-btn"
+                  type="button"
+                  class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-2 flex gap-2 rounded-xl text-white font-medium cursor-pointer items-center transition-all active:scale-95 z-10"
+                >
+                  <img src="./assets/images/download.svg" alt="" />
+                  <span>Télécharger l'application</span>
+                  <i
+                    class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"
+                    id="dropdown-arrow"
+                  ></i>
+                </button>
+
+                <div
+                  id="dropdown-menu"
+                  class="hidden opacity-0 scale-95 transition-all duration-200 absolute top-full right-0 mt-2 w-64 rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5 z-50 transform origin-top-right"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm text-[#9696B9] hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                    >
+                      <img
+                        src="./assets/images/appstore.jpg"
+                        alt="app store"
+                        class="max-w-8"
+                      />
+                      Depuis App Store
+                    </a>
+
+                    <a
+                      href="#"
+                      class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-[#9696B9] text-sm hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                    >
+                      <img
+                        src="./assets/images/playstore.png"
+                        alt="playstore"
+                        class="max-w-8"
+                      />
+                      Depuis PlayStore
+                    </a>
+
+                    <!-- Séparateur -->
+                    <div class="my-1 border-t border-gray-100"></div>
+
+                    <a
+                      href="#"
+                      class="flex items-center gap-3 rounded-lg px-4 py-2.5 text-[#9696B9] text-sm hover:bg-gray-500/10 hover:text-black hover:font-bold transition-colors"
+                    >
+                      <img
+                        src="./assets/images/cropped-favicon_3.png"
+                        alt="paysika"
+                      />
+                      Utiliser l'app web PaySika
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="relative hidden xs:block">
+                  <div
+                    id="countrySelector"
+                    class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center gap-2 px-5 py-2 rounded-lg cursor-pointer border-2 border-transparent"
+                  >
+                    <img
+                      id="selectedCountryFlag"
+                      src="./assets/images/glob.png"
+                      alt="GLOBE"
+                      class="w-6 h-4 object-cover rounded-sm"
+                    />
+                    <span id="selectedCountryText" class="font-bold text-sm"
+                      >Choisir Pays</span
+                    >
+                  </div>
+                  <ul
+                    id="countryList"
+                    class="hidden absolute top-full right-0 mt-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl z-50 w-56 border border-gray-200"
+                  >
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Afrique Francophone',
+                          './assets/images/PaySika-Afrique-Francophone.png',
+                        )
+                      "
+                      class="flex items-center px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                    >
+                      <img
+                        src="./assets/images/PaySika-Afrique-Francophone.png"
+                        class="w-5 h-3"
+                      />
+                      <span class="font-bold text-sm text-[#7B7BA7]"
+                        >Afrique Francophone</span
+                      >
+                    </li>
+                    <li
+                      onclick="
+                        changeCountry(
+                          'Cameroun',
+                          './assets/images/cameroun.png',
+                        )
+                      "
+                      class="flex items-center px-4 py-2 gap-2 hover:bg-gray-100 cursor-pointer"
+                    >
+                      <img src="./assets/images/cameroun.png" class="w-5 h-3" />
+                      <span class="font-bold text-sm text-[#7B7BA7]"
+                        >Cameroun</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  id="menu_open"
+                  class="xs:hidden text-2xl cursor-pointer text-[#0E0E5E] p-2 border border-gray-400"
+                >
+                  <i id="menu_icon" class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <div
+            id="mobile_menu"
+            class="xs:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+          >
+            <div class="py-6 flex flex-col gap-6 border-t border-gray-100">
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a
+                    href="./acceuil.html"
+                    class="text-[#7B7BA7] font-medium text-lg"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./prix.html"
+                    class="text-[#7B7BA7] font-medium text-lg"
+                    >Prix</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="text-[#7B7BA7] font-medium text-lg"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./aidePaysika.html"
+                    class="text-[#7B7BA7] font-medium text-lg"
+                    >Aide PaySika</a
+                  >
+                </li>
+              </ul>
+
+              <div class="flex flex-col gap-4 pt-4 border-t border-gray-50">
+                <button
+                  type="button"
+                  class="bg-linear-to-r from-[#00B5E3] to-[#00C89E] px-5 py-3 flex justify-center gap-2 rounded-xl text-white font-medium w-full"
+                >
+                  <img src="./assets/images/download.svg" alt="" />
+                  Télécharger l'application
+                </button>
+                <div
+                  class="bg-[#E5F9F8] text-[#0a0a4a] flex items-center justify-center gap-2 px-5 py-3 rounded-lg cursor-pointer"
+                >
+                  <img
+                    src="./assets/images/glob.png"
+                    alt="GLOBE"
+                    class="w-6 h-4 object-cover rounded-sm"
+                  />
+                  <span class="font-bold text-sm">Choisir Pays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section class="blog_image max-md:pb-10 h-100 md:h-125 bg-[#F3F4F5] ">
+        <div class="max-w-7xl mx-auto h-full relative">
+          <img
+            src="./assets/images/blog2.png"
+            alt="blog image 1"
+            class="rounded-bl-[80px] h-full w-full object-cover rounded-br-[80px]"
+          />
+          <div
+            class="bg-white rounded-full flex gap-3 items-center w-fit px-4 py-2 absolute bottom-6 hover:text-blue-600"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="./blog.html">Back to blog</a>
+          </div>
+          <div
+            class="bg-white rounded-xl md:p-5 p-3 flex flex-col gap-3 items-center w-fit absolute -bottom-10 right-0 hover:text-blue-600"
+          >
+            <div class="flex items-center justify-between w-full">
+              <p class="font-medium">Share</p>
+              <i class="fa-solid fa-share"></i>
+            </div>
+            <hr class="bg-gray-500 w-fit" />
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+                ><i class="fa-brands fa-facebook-f text-xs"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+                ><i class="fa-brands fa-instagram text-xs"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+                ><i class="fa-brands fa-twitter text-xs"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+                ><i class="fa-brands fa-linkedin-in text-xs"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="details_blog pt-10 min-h-screen bg-[#F3F4F5]">
+        <div class="max-w-7xl mx-auto flex flex-col gap-5">
+          <h1 class="text-2xl md:text-3xl font-bold max-w-3xl text-[#0E0E5E]">
+            Découvrez ce qu’il vous faut pour devenir créatrice de contenu ! On
+            vous explique tout…
+          </h1>
+          <div class="type_category_and_date flex gap-5">
+            <h2 class="uppercase text-[#8081AA]">Thèmes d’actualités</h2>
+            <p class="uppercase text-[#8081AA]">• 5 mars 2026</p>
+          </div>
+          
+          <div class="bg-white px-12 py-7 max-w-4xl flex flex-col gap-5">
+            <p>
+              Devenir créatrice de contenu, c’est bien plus qu’une simple
+              passion pour les réseaux sociaux ou le partage d’idées. C’est un
+              métier qui nécessite une bonne dose de créativité, de discipline
+              et de stratégie. Que ce soit sur Instagram, YouTube, TikTok ou
+              d’autres plateformes, les créatrices de contenu inspirent,
+              éduquent, divertissent et connectent des communautés du monde
+              entier. Mais comment se lancer dans cette aventure ? Quels outils,
+              compétences et démarches sont nécessaires ? Et surtout, comment
+              monétiser votre travail ? Découvrons ensemble tout ce qu’il vous
+              faut pour réussir !
+            </p>
+            <p>
+              Surtout que les paiements en ligne essentiels pour reussir chaque
+              étapes peuvent être effectué avec la carte bancaire PaySika
+              disponible ici : <a href="" class="underline text-[#0D6EFD]"> lien pour telecharger</a>
+            </p>
+        </p>
+            <ol type="1">
+              <li type="1" class="ml-4 text-3xl font-bold text-[#0E0E5E]">Définissez votre niche et trouvez votre voix</li>
+              <p class="mt-2">
+                Avant de poster votre premier contenu, demandez-vous : Quel type
+                de contenu souhaitez-vous créer ? Il est essentiel de choisir
+                une niche (un domaine spécifique) qui vous passionne et que vos
+                abonnés trouveront intéressant. Voici quelques exemples
+                populaires :
+              </p>
+              <ul class="text-lg ml-5">
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Beauté et mode</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Cuisine et lifestyle</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Sante et bien-etre</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Voyages et avantures</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Education et developpement personnels</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Humour et divertisement</p>
+                    </div>
+                </li>
+            </ul>
+              <p class="mt-4">
+                Une fois votre niche définie, concentrez-vous sur votre « voix »
+                unique. Soyez authentique et fidèle à vos valeurs pour créer un
+                lien fort avec votre audience.
+              </p>
+              <p class="mt-5">
+                Pour pouvez avoir plus d’informations intéressant avec <a href="#" class="underline text-[#0D6EFD]">ChatGpt
+                    pro</a> donc l’abonnement peut être payé avec la carte bancaire
+                PaySika disponible ici : <a href="#" class="underline text-[#0D6EFD]">lien pour télécharger</a>
+              </p>
+              <li type="1" class="ml-4 text-3xl font-bold text-[#0E0E5E] mt-4">Investissez dans les bons outils</li>
+              <p class="mb-3 mt-3">Pour produire un contenu de qualité, il est important d’avoir les bons outils à disposition. Voici une liste des équipements essentiels :</p>
+              <span class="text-3xl">Matériel :</span>
+              <ul class="mt-2 ml-5 ">
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p> <span class="font-bold">un bon smartphone ou appareile photo</span> : Pour capturer des photos et vidéos de haute qualité.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p> <span class="font-bold">ordinateur portable</span> : ideal pour editer vos contenue, gerer vos reseaux sociaux et collaborer avec des marques.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p> <span class="font-bold">Accessoires comme trépieds, microphones ou éclairages </span> : Ces accessoires améliorent la qualité de vos productions.</p>
+                    </div>
+                </li>
+              </ul>
+              
+            
+              <p class="mb-3 mt-4">C’est éléments sont généralement disponibles sur les sites marchands comme <a href="#" class="underline text-[#0D6EFD]">Aliexpress</a> , Alibaba… Vous pouvez regler vos factures avec la carte bancaire PaySika disponible ici : <a href="#" class="underline text-[#0D6EFD]">lien pour télécharger</a></p>
+              <span class="text-3xl">Logiciels et applications :</span>
+              <ul class=" mt-2 ml-5">
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                <p><span class="font-bold">Logitiels d'edition video </span>: Adobe premier pro, final cut pro ou meme des applications gratuites comme inshot ou capcut.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p> <span class="font-bold">Outils de retouche photo</span> : Hootsuite, Buffer ou Later pour organiser vos publications.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p><span class="font-bold">Planificateurs de contenu</span> : Hootsuite, Buffer ou Later pour organiser vos publications.</p>
+                    </div>
+                </li>
+              </ul>
+              <p class="mt-5">Les abonnements de ces logiciels sont géneralement trés abordable et vous pouvez regler vos factures avec la carte bancaire PaySika disponible ici : <a href="#" class="underline text-[#0D6EFD]">lien pour télécharger</a></p>
+                <li type="1"  class="ml-4 text-3xl font-bold text-[#0E0E5E] mt-4" >Apprenez les bases du marketing digital</li>
+              <p class="mt-3">Comprendre comment fonctionnent les algorithmes des réseaux sociaux et maîtriser les stratégies de contenu sont cruciaux pour maximiser votre visibilité. Voici quelques notions clés à explorer :</p>
+              <ul class=" mt-2 ml-5">
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                <p><span class="font-bold">SEO (optimisation pour les moteurs de recherche)</span>: Important si vous créez du contenu textuel ou vidéo sur YouTube.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p> <span class="font-bold">Engagement avec votre communauté</span> : Utilisez les statistiques fournies par chaque plateforme pour ajuster vos stratégies.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center gap-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p><span class="font-bold">Analytiques</span> : Hootsuite, Buffer ou Later pour organiser vos publications.</p>
+                    </div>
+                </li>
+              </ul>
+                <p class="mt-4">Vous pouvez acquerir plus de compétence dans ces en achetant les cours en ligne sur Udemy, Cousera ou Edx avec votre carte bancaire virtuelle disponible ici : Vous pouvez regler vos factures avec la carte bancaire PaySika disponible ici : <a href="#" class="underline text-[#0D6EFD]">lien pour télécharger</a></p>
+                    <li type="1"  class="ml-4 text-3xl mt-4 font-bold text-[#0E0E5E]">Construisez votre marque personnelle</li>
+                    <p class="mt-3">Votre identité en tant que créatrice de contenu doit être cohérente et reconnaissable. Créez une signature visuelle unique grâce à :</p>
+                    <ul class=" mt-2 ml-5">
+                        <li>
+                            <div class="flex items-center gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                        <p>Un nom d’utilisateur facile à retenir.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                                <p>Une charte graphique distinctive (couleurs, typographies).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-black"></span>
+                                <p>Des messages alignés avec vos valeurs.</p>
+                            </div>
+                        </li>
+                      </ul>
+                    <p class="mt-4">N’oubliez pas que votre image en ligne est aussi importante que votre contenu. Montrez qui vous êtes vraiment et restez fidèle à votre authenticité.</p>
+                    <li type="1"  class="ml-4 mt-4 text-3xl font-bold text-[#0E0E5E]">Monétisez votre contenu</li>
+                    <p class=" mb-3 mt-3">L’un des aspects les plus intéressants de ce métier est sa capacité à générer des revenus. Voici quelques façons courantes de monétiser votre activité :</p>
+                    <span class=" text-2xl text-[#000000]">Collaborations avec des marques :</span>
+                    <p class=" mb-3 mt-3">Les partenariats publicitaires sont l’une des principales sources de revenus pour les créateurs de contenu. Plus votre audience grandit, plus vous serez attractif pour les entreprises.</p>
+                    <span class="mt-4 text-2xl text-[#000000]">Sponsoring et affiliation :</span>
+                    <p class=" mb-3 mt-3">Promouvoir des produits ou services en échange d’une commission peut également rapporter gros. Par exemple, vous pouvez intégrer des liens affiliés dans vos descriptions ou stories.</p>
+                    <span class="mt-4 text-2xl text-[#000000]">Vente de produits numériques :</span>
+                    <p class=" mb-3 mt-3">Créez et vendez vos propres produits, tels que des ebooks, des formations en ligne ou des templates personnalisés.</p>
+                    <span class="mt-4 text-2xl text-[#000000]">Abonnements premium :</span>
+                    <p class="mt-2">Proposez un accès exclusif à certains contenus via des plateformes comme Patreon ou OnlyFans.</p>
+                    <li type="1"  class="ml-4 text-2xl font-bold mt-4  text-[#0E0E5E]">Paiement simplifié avec PaySika</li>
+                    <p class="mt-3">Lorsque vous commencez à recevoir des paiements pour vos collaborations ou vos ventes, il est important d’avoir un système de paiement pratique et sécurisé. Avec PaySika , vous pouvez accepter des paiements directement depuis votre carte bancaire sans complications. Cette solution facilite les transactions entre vous et vos clients ou partenaires, où que vous soyez.</p>
+                    <p class="mt-4">
+                        Grâce à PaySika, vous n’aurez plus à vous soucier des délais de paiement ou des frais cachés. Tout est centralisé et accessible en quelques clics. C’est un excellent moyen de gérer vos finances professionnelles efficacement.</p>
+                        <li type="1"  class="ml-4 text-3xl  mt-4 font-bold text-[#0E0E5E]">Restez motivée et persévérante</li>
+                        <p class="mt-3">Enfin, rappelez-vous que devenir une créatrice de contenu prospère demande du temps et de l’effort. Ne vous découragez pas si les résultats ne viennent pas immédiatement. Continuez à apprendre, à expérimenter et à innover. Écoutez vos abonnés, adaptez-vous aux tendances et gardez toujours à l’esprit pourquoi vous avez commencé cette aventure.</p>
+                        <p class="mt-3">En conclusion, devenir créatrice de contenu est une opportunité fantastique pour partager votre passion, inspirer les autres et créer une carrière flexible et gratifiante. Avec les bons outils, une stratégie solide et un peu de patience, vous pouvez transformer votre hobby en véritable succès. Alors, prêt(e) à démarrer ? 😊✨</p>
+                       <p class="mt-4">Et n’oubliez pas : grâce à PaySika, gérer vos paiements sera aussi simple que jamais !</p> 
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="text-center bg-[#F3F4F5]  px-5 py-20 text-3xl font-bold  text-[#0E0E5E]">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl">Lire aussi .</h2>
+          </div>
+         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl  transition duration-500">
+              <div class="overflow-hidden">
+                <img src="./assets/images/bloc1.jpg.jpeg" class="w-full h-55 object-cover group-hover:scale-110 transition duration-700" alt="image">
+              </div>
+              <div class="px-6 text-left h-44">
+                <span class="text-xs font-semibold uppercase text-[#8C81AA] -top-60">Actu paysika</span>
+                <h3 class="mt-5 text-base font-bold text-[#333333] uppercase">
+                  cartes bloques, cartes supprimee par paysika; ont 
+                  <span class="">vous dit tout</span>
+                </h3>
+                <p class="mt-4 text-sm text-[#8C81AA]">29 janvier 2025</p>
+              </div>
+              </div>
+
+              <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl  transition duration-500">
+                <div class="overflow-hidden">
+                  <img src="./assets/images/blog2.png" class="w-full h-55 object-cover group-hover:scale-110 transition duration-700" alt="image">
+                </div>
+                <div class="px-6 text-left">
+                  <span class="text-xs font-semibold uppercase text-[#8C81AA] -top-60">Actu paysika</span>
+                  <h3 class="mt-5 text-base font-bold text-[#333333] uppercase">
+                    cartes bloques, cartes supprimee par paysika; ont 
+                    <span class="">vous dit tout</span>
+                  </h3>
+                  <p class="mt-4 text-sm text-[#8C81AA]">29 janvier 2025</p>
+                </div>
+                </div>
+
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl  transition duration-500">
+                  <div class="overflow-hidden">
+                    <img src="./assets/images/bloc2.jpg.jpeg" class="w-full h-55 object-cover group-hover:scale-110 transition duration-700" alt="image">
+                  </div>
+                  <div class="px-6 text-left">
+                    <span class="text-xs font-semibold uppercase text-[#8C81AA] -top-60">Actu paysika</span>
+                    <h3 class="mt-5 text-base font-bold text-[#333333] uppercase">
+                      cartes bloques, cartes supprimee par paysika; ont 
+                      <span class="">vous dit tout</span>
+                    </h3>
+                    <p class="mt-4 text-sm text-[#8C81AA]">29 janvier 2025</p>
+                  </div>
+                  </div>
+            </div>
+         </div>
+         <div
+         class="max-w-7xl mx-auto px-4 py-10 mt-25 relative z-10 bg-linear-to-r from-[#00BCE9] to-[#00C9DB] rounded-[40px] p-6 md:p-10 overflow-hidden flex flex-col md:flex-row items-center"
+       >
+         <div
+           class="w-full text-center flex flex-col items-center md:items-start md:text-left md:w-2/3 text-white z-10"
+         >
+           <h2 class="text-2xl md:text-3xl font-bold mb-6">
+             Sans frais, téléchargez l'application maintenant !
+           </h2>
+
+           <p
+             class="text-sm md:text-lg md:self-start mb-8 max-w-md font-medium opacity-90"
+           >
+             Installez PaySika et créez votre compte en moins de 2 minutes.
+             Créez vos cartes et commencez à les utiliser dès maintenant.
+           </p>
+
+           <button
+             class="bg-white text-[#0E0E5E] md:self-start font-bold py-3 px-8 rounded-2xl mb-12 hover:bg-gray-100 transition-colors shadow-lg"
+           >
+             Installez Paysika
+           </button>
+
+           <div
+             class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 md:self-start"
+           >
+             <div class="flex items-center gap-3">
+               <span
+                 class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+               >
+                 <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+               </span>
+               <p class="text-sm md:text-base">Carte instantanée gratuite.</p>
+             </div>
+
+             <div class="flex items-center gap-3">
+               <span
+                 class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+               >
+                 <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+               </span>
+               <p class="text-sm md:text-base">Pas de recharge/maintenance.</p>
+             </div>
+
+             <div class="flex items-center gap-3">
+               <span
+                 class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+               >
+                 <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+               </span>
+               <p class="text-sm md:text-base">Pas de frais de retrait.</p>
+             </div>
+
+             <div class="flex items-center gap-3">
+               <span
+                 class="w-7 h-7 bg-white rounded-full flex items-center justify-center shrink-0"
+               >
+                 <i class="fa-solid fa-check text-[#20D3A0] text-lg"></i>
+               </span>
+               <p class="text-sm md:text-base">Pas de frais mensuel.</p>
+             </div>
+           </div>
+         </div>
+
+         <div
+           class="w-full md:w-1/3 flex justify-center mt-10 md:mt-0 relative "
+         >
+           <img
+             src="./assets/images/telecharge-app.png"
+             alt="Main tenant un téléphone"
+             class="w-64 md:w-112.5 md:absolute md:top-1/2 md:-translate-y-1/2 md:-right-16 drop-shadow-2xl"
+           />
+         </div>
+       </div>
+      </section>
+      <footer class="bg-[#0E0E5E] pb-10 text-white -mt-60 pt-80">
+        <div class="max-w-7xl mx-auto px-6 mb-20">
+          <div
+            class="bg-[#27276E] rounded-[30px] p-10 md:p-16 text-center shadow-2xl"
+          >
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">
+              Contactez-nous maintenant
+            </h2>
+            <p class="text-gray-300 mb-8">Prenons contact.</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+              <button
+                class="animate-oblique-left-to-right bg-white text-[#0E0E5E] font-bold py-3 px-8 rounded-xl transition-transform hover:scale-105"
+              >
+                Rejoignez la néo-banque mobile
+              </button>
+              <button
+                class="animate-oblique-right-to-left bg-linear-to-r from-[#00B2E1] to-[#00B1C0] text-white font-bold py-3 px-10 rounded-xl transition-transform hover:scale-105 shadow-[0_0_15px_rgba(0,204,146,0.4)]"
+              >
+                Contactez-nous
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-700 pb-12"
+        >
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/images/logo-footer.png"
+                alt="PaySika"
+                class="h-12"
+              />
+            </div>
+            <p class="text-gray-300 text-sm">
+              Inscrivez-vous à nos newsletters et soyez à jour
+            </p>
+
+            <form class="space-y-4">
+              <input
+                type="email"
+                class="w-full p-3 rounded-xl bg-white text-black focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="w-full bg-linear-to-r from-[#00B5E3] to-[#00C899] py-3 rounded-xl font-bold hover:bg-linear-to-l"
+              >
+                S'inscrire
+              </button>
+              <label
+                class="flex items-center gap-2 text-md text-gray-300 cursor-pointer"
+              >
+                <input type="checkbox" class="accent-[#E81123]" checked />
+                Abonnez-vous à notre newsletter
+              </label>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">PaySika</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Avantages</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >À Propos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Demander une Demo</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Conditions générales d'utilisation</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-6">Services</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Pourquoi PaySika</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Le processus</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold mb-6">Contacts Rapide</h3>
+
+            <div class="flex gap-4">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300">
+                Contact : +33 7 66 59 27 26 (Il ne s'agit pas d'un numéro du
+                service client. Vous pouvez contacter le service client via le
+                chat dans l'application.)
+              </p>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-envelope text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300">
+                Email : support@paysika.co
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="shrink-0 w-10 h-10 bg-[#00B0F4] rounded-full flex items-center justify-center"
+              >
+                <i class="fa-solid fa-location-dot text-sm text-white"></i>
+              </div>
+              <p class="text-xs md:text-md text-gray-300 italic">
+                FRANCE : 55 Avenue Louis Breguet, 31400 Toulouse, La Cité.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-facebook-f text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-instagram text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-twitter text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-linkedin-in text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-whatsapp text-xs"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 rounded-full border border-gray-500 text-[#00B0F4] flex items-center justify-center bg-white hover:text-[#0E0E5E] transition-all"
+              ><i class="fa-brands fa-telegram text-xs"></i
+            ></a>
+          </div>
+
+          <div class="text-[10px] md:text-[15px] text-gray-400 text-center">
+            © 2022 PaySika. All rights reserved. Design By
+            <span class="text-[#057169] font-medium">Agence Motion</span>
+          </div>
+        </div>
+        <hr class="max-w-7xl mx-auto text-[#27276E] my-8" />
+        <div class="max-w-7xl mx-auto">
+          <p class="text-xs text-[#57578F]">
+            Les cartes bancaires VISA PaySika sont émises par Ecobank Cameroon
+            au Cameroun, en vertu d’une licence de Visa International.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Holding est une société enregistrée en France, au Registre
+            du Commerce et des Sociétés de Toulouse sous le numéro 881936744,
+            avec siège social au 55 Avenue Louis Breguet, 31400 Toulouse, La
+            Cité, At Home.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Cameroun est immatriculée au registre de commerce et du
+            crédit mobilier de Douala sous le numéro RC/DLN/2021/B/2307, dont le
+            siège social est à Douala Akwa, sis à la Rue Foch; BP 15 027
+          </p>
+          <p class="text-xs text-[#57578F]">
+            PaySika Côte d’Ivoire, est immatriculée en Côte d’Ivoire sous le
+            numéro CI-ABJ-03-2022-B17-00002, avec le siège social situé à II
+            Plateaux 7eme Tranche, 28 BP 1676 Abidjan 28.
+          </p>
+          <p class="text-xs text-[#57578F]">
+            Ce site est publié conjointement par PaySika Cameroun et PaySika
+            Holding
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

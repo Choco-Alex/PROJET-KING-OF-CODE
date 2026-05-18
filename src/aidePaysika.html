@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+
+    <link rel="stylesheet" href="./assets/css/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#F3F6FB]">
+    <header class="bg-[#176AE3] pb-5">
+      <div
+        class="max-w-5xl mx-auto px-3 pt-3 pb-5 xsm:pb-6.5 xsm:pt-4.5 max-xsm:mb-12"
+      >
+        <div class="flex justify-between items-center mb-5 xsm:mb-6.5">
+          <span class="text-white font-bold text-[18px]">PaySika</span>
+
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <div
+                id="languageSelector"
+                class="bg-white text-[#0a0a4a] flex items-center gap-2 px-2.5 py-2 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all"
+              >
+                <span id="selectedText" class="font-bold hidden text-sm"
+                  >FR</span
+                >
+                <img
+                  id="selectedFlag"
+                  src="./assets/images/fr.png"
+                  alt="FR"
+                  class="w-8 h-6 object-cover rounded-sm"
+                />
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  />
+                </svg>
+              </div>
+
+              <ul
+                id="languageList"
+                class="hidden absolute top-full right-1/2 translate-x-1/2 mt-3 py-2 bg-white text-[#0a0a4a] rounded-lg shadow-xl overflow-hidden z-50 w-52 border border-gray-200"
+              >
+                <li
+                  onclick="changeLang('French', './assets/images/fr.png')"
+                  class="flex items-center gap-4 px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100"
+                >
+                  <img
+                    src="./assets/images/fr.png"
+                    class="w-8 h-6"
+                    alt="français"
+                  />
+                  <span class="focus:font-bold">French</span>
+                </li>
+                <li
+                  onclick="changeLang('English', './assets/images/gb.png')"
+                  class="flex items-center gap-4 px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                >
+                  <img
+                    src="./assets/images/gb.png"
+                    class="w-8 h-6"
+                    alt="anglais"
+                  />
+                  <span class="focus:font-bold">English</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="./acceuil.html"
+              class="px-4 xsm:px-5.5 py-2.5 rounded-lg text-white bg-[#468BF1] flex items-center"
+            >
+              <span class="max-[480px]:hidden">Aller au site</span>
+              <span class="min-[480px]:hidden"
+                ><i class="fa-solid fa-house"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <h1
+          class="text-center text-[25px] xsm:text-[23.4px] font-medium text-white mb-3 xsm:mb-6"
+        >
+          Comment pouvons-nous vous aider ?
+        </h1>
+
+        <div class="flex justify-center max-w-150 bg-white rounded-lg mx-auto">
+          <span class="w-16 py-5 flex justify-end items-center"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span class="inline-block w-full xsm:mr-16"
+            ><input
+              type="text"
+              placeholder="Rechercher sur le centre d'aide..."
+              aria-label="rechercher sur le centre d'aide..."
+              class="w-full h-full py-5 border-none outline-0 text-center placeholder:text-black placeholder:text-lg"
+          /></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-[480px]:hidden">
+        <div class="max-w-5xl px-5 mx-auto my-14">
+          <h2
+            class="text-2xl font-bold flex gap-3 text-[#1C293B] max-md:justify-center"
+          >
+            <span class="text-2xl flex items-center text-[#A8BACD]"
+              ><i class="fa-solid fa-star"></i
+            ></span>
+            Articles en vedette
+          </h2>
+
+          <div
+            class="mt-7.5 grid grid-cols-1 *:shadow-sm *:cursor-pointer **:focus:translate-y-px md:grid-cols-2 md:grid-rows-3 gap-x-6 gap-y-4 items-center *:px-6 *:py-3"
+          >
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >PaySika : comment créer votre deuxième carte bancaire
+                  virtuelle XAF ?</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >Comment faire des réclamations chez PaySika</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >Comment effectuer un paiement sur Alibaba ?</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >PAYSIKA REJOINT LE PROGRAMME FINTECH FAST TRACK DE VISA</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >Emplois Développeur Python (Offre exprirée)</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+
+            <div class="bg-white rounded-lg">
+              <a
+                href=""
+                class="flex items-center font-semibold justify-between h-9"
+              >
+                <span class="line-clamp-2"
+                  >Emploi Community Manager (Offre exprirée)</span
+                >
+                <span class="ml-2"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-[480px]:mt-10">
+        <div class="max-w-5xl px-3 mx-auto pb-20">
+          <h2 class="font-bold text-2xl max-md:text-center">
+            Toutes les catégories
+          </h2>
+
+          <div
+            class="mt-7.5 *:bg-white *:px-6 *:py-3 *:rounded-md *:shadow-sm **:focus:translate-y-px grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"
+          >
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/microsoftteams-image-81_1h16gs0.png.jpeg"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Vérification
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Nous vous disons tout sur la vérification de votre compte
+                    PaySika
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/microsoftteams-image-80_1dal3ux.png.jpeg"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#476DA5] w-fit rounded-[3px]"
+                    >Emplois</span
+                  >
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 text-[#1c293b]">
+                    Emplois disponibles.</span
+                  >
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_17f1ivw.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Nos Tarifs
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Tout connaitre sur nos prix ...
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/sans-titre-1plan-de-travail-1_1ca82kz.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#33DB9B] w-fit rounded-[3px]"
+                    >Cashback</span
+                  >
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 text-[#1c293b]">
+                    C'est un programme de remboursement par lequel une partie du
+                    montant dépensé lors d'un achat sur site cible</span
+                  >
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_1qo6no4.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Questions Fréquentes
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Votre réponse est certainement ici En savoir plus sur nos
+                    services et le lexique que vous employons
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/apprendre-a-utiliser-paysika_46gr4j.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Commencer
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Apprendre à utiliser PaySika
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_7k1xsk.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Cartes Bancaires
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Comment obtenir et utiliser correctement sa carte bancaire
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_1ubz378.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Profil et Sécurité
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Gérer son profil et tout connaitre sur nos processus de
+                    sécurités
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/nos-experts-vous-accompagnent-_e8xv3q.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Paiement / Tutos
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Nos experts vous accompagnent au quotidien, profitez-en ...
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_hocs2w.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#08B2E5] w-fit rounded-[3px]"
+                  >
+                    Partenaires
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Nos activités avec nos partenaires
+                  </span>
+                </span>
+              </span>
+            </a>
+
+            <a href="" class="flex flex-row gap-9">
+              <span class="min-h-25 min-w-25">
+                <img
+                  src="./assets/images/help/couverture-pour-les-categories_m51j3q.png"
+                  alt=""
+                  class="w-25 h-25 shrink-0 object-contain"
+                />
+              </span>
+
+              <span class="overflow-hidden w-fit">
+                <span class="block mb-3 mt-0.5">
+                  <span
+                    class="block truncate px-3.5 py-1.5 text-white font-semibold bg-[#252754] w-fit rounded-[3px]"
+                  >
+                    Parrainage
+                  </span>
+                </span>
+
+                <span class="max-h-9">
+                  <span class="line-clamp-2 w-fit text-[#1c293b]">
+                    Parrainez vos proches et obtenez des rcompenses inégalées.
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white">
+      <div class="max-w-5xl mx-auto px-3">
+        <div class="py-13 grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-6">
+          <div class="">
+            <h2 class="text-2xl font-bold text-center md:text-left">
+              Vous ne trouvez pas ce que vous cherchez ?
+            </h2>
+            <p class="mt-2.5 text-center text-[#37516c] md:text-left">
+              Discutez avec nous ou envoyez-nous un email.
+            </p>
+          </div>
+
+          <div class="flex justify-center md:justify-end">
+            <a
+              href=""
+              class="bg-[#1972F5] text-white px-6.5 py-3.5 rounded-lg flex gap-4 items-center w-fit h-fit"
+            >
+              <span class=""
+                ><i
+                  class="fa-solid fa-message fa-rotate-by fa-sm"
+                  style="--fa-rotate-angle: 350deg"
+                ></i
+              ></span>
+              Discuter avec nous
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-black/10 w-full h-[0.25px]"></div>
+
+        <div class="flex gap-4 items-center py-5.5">
+          <span class="text-[#37516c]">© 2026</span>
+          <span class="w-4 h-4"
+            ><img
+              src="./assets/images/help/social-profile_efumnh.jpg.jpeg"
+              alt=""
+              class="h-full w-full"
+          /></span>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="min-w-15 min-h-15 bottom-3 right-3 shadow-md rounded-full animate-bounce fixed"
+    >
+      <img
+        src="./assets/images/help/120.webp"
+        alt=""
+        class="w-15 h-15 rounded-full"
+      />
+    </div>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

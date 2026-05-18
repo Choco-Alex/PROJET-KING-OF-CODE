@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 58.125rem;
+}
+
+@layer base {
+}
+
+@layer utilities {
+  @keyframes slideObliqueLeft {
+    0% {
+      opacity: 0;
+      transform: translate(50px, -50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes slideObliqueRight {
+    0% {
+      opacity: 0;
+      transform: translate(50px, -50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes slideObliqueLeftToRight {
+    0% {
+      opacity: 0;
+      transform: translate(-50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes slideObliqueRightToLeft {
+    0% {
+      opacity: 0;
+      transform: translate(50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes slideTop {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-oblique-left,
+  .animate-oblique-right,
+  .animate-oblique-left-to-right,
+  .animate-oblique-right-to-left,
+  .animate-fade-up,
+  .animate-to-top {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .animate-oblique-left.is-visible {
+    animation: slideObliqueLeft 0.8s ease-out forwards;
+  }
+  .animate-oblique-right.is-visible {
+    animation: slideObliqueRight 0.8s ease-out forwards;
+  }
+  .animate-oblique-left-to-right.is-visible {
+    animation: slideObliqueLeftToRight 0.8s ease-out forwards;
+  }
+  .animate-oblique-right-to-left.is-visible {
+    animation: slideObliqueRightToLeft 0.8s ease-out forwards;
+  }
+  .animate-fade-up.is-visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  .animate-to-top.is-visible {
+    opacity: 0;
+    animation-name: slideTop;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+}
